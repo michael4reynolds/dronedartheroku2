@@ -15,7 +15,7 @@ main() {
 
   HttpServer server = new HttpServer();
   String clientPath = '${directory.path}/client';
-  print(clientPath);
+  print('****CLIENTPATH: $clientPath****');
   server.defaultRequestHandler = new StaticFileHandler(clientPath).onRequest;
 
   server.listen(host, port);

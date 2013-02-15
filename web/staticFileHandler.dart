@@ -14,7 +14,7 @@ class StaticFileHandler {
   onRequest(HttpRequest request, HttpResponse response) {
     final String path = request.path == '/' ? '/clock.html' : request.path;
     final File file = new File('${basePath}${path}');
-    print('${basePath}${path}');
+    print('****FILEPATH: ${basePath}${path}****');
     file.exists().then((found) {
       if (found) {
         file.fullPath().then((String fullPath) {
